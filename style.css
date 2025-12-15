@@ -1,0 +1,349 @@
+/* style.css */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+}
+
+.header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 30px;
+}
+
+/* Profile Image Section */
+.profile-image-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #ff9800;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Bio Section */
+.bio-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.bio-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #ff9800;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.bio-section h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background-color: #ff9800;
+    bottom: -8px;
+    left: 20%;
+}
+
+.bio-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.bio-english, .bio-amharic {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bio-english p {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.bio-amharic h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #ff9800;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.bio-amharic p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #fff9f0;
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 5px solid #ff9800;
+}
+
+.contact-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #ff9800;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-intro {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 1.05rem;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff9800;
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #f57c00;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Success Message */
+.form-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form-success i {
+    font-size: 1.8rem;
+}
+
+.form-success p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+.footer p {
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff9800;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+    
+    .image-container {
+        width: 170px;
+        height: 170px;
+    }
+    
+    .bio-english p, .bio-amharic p {
+        font-size: 1rem;
+    }
+    
+    .contact-section {
+        padding: 20px;
+    }
+    
+    .bio-section h2, .contact-section h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 1.9rem;
+    }
+    
+    .image-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .bio-content {
+        padding: 0 5px;
+    }
+    
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    .social-links a {
+        font-size: 1.3rem;
+    }
+}
